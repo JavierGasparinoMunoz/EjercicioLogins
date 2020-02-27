@@ -11,6 +11,7 @@ import javafx.scene.control.ProgressBar;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import ventanas.VentanaLogin;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -43,11 +44,11 @@ public class ControladoraVentanaSplash implements Initializable {
             }
         });
 
-        /*tareaSecundaria.setOnSucceeded(new EventHandler<WorkerStateEvent>() {
+        tareaSecundaria.setOnSucceeded(new EventHandler<WorkerStateEvent>() {
             @Override
             public void handle(WorkerStateEvent event) {
                 try {
-                     ventanaUno = new VentanaUno();
+                    VentanaLogin ventanaLogin = new VentanaLogin();
 
 
                 } catch (Exception e) {
@@ -56,7 +57,7 @@ public class ControladoraVentanaSplash implements Initializable {
                 Stage stage = (Stage) imagenFondo.getScene().getWindow();
                 stage.close();
             }
-        });*/
+        });
 
     }
 
@@ -67,10 +68,10 @@ public class ControladoraVentanaSplash implements Initializable {
 
                 for(int i = 0;i < 100;i++){
                     updateProgress(i,100);
-                    Thread.sleep(100);
+                    Thread.sleep(25);
                 }
 
-                updateProgress(1,100);
+                updateProgress(1,10);
 
                 return null;
             }

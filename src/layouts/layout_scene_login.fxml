@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import com.jfoenix.controls.*?>
 <?import javafx.scene.image.*?>
 <?import java.lang.*?>
@@ -8,32 +9,42 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-image: url(/resources/fondoFXX.jpg); -fx-background-repeat: no-repeat; -fx-background-position: center; -fx-background-size: 800 600;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladoras.ControladoraVentanaLogin">
    <children>
-      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../resources/splash.jpg" />
-         </image>
-      </ImageView>
-      <GridPane>
+      <GridPane prefHeight="438.0" prefWidth="712.0" style="-fx-background-color: #FFFFFF; -fx-opacity: 0.9;">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
         <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="182.0" minHeight="40.0" prefHeight="172.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="110.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="169.0" minHeight="10.0" prefHeight="108.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="206.0" minHeight="10.0" prefHeight="123.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <JFXTextField GridPane.columnSpan="2" />
-            <JFXTextField GridPane.columnSpan="2" GridPane.rowIndex="1" />
-            <CheckBox mnemonicParsing="false" text="CheckBox" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" text="Iniciar Sesion" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-            <Button mnemonicParsing="false" text="Registrarme" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <JFXTextField fx:id="usuario" opacity="0.7" style="-fx-opacity: 0.7;" GridPane.columnSpan="2" GridPane.rowIndex="1">
+               <padding>
+                  <Insets left="15.0" right="15.0" />
+               </padding></JFXTextField>
+            <JFXTextField fx:id="contrasenia" GridPane.columnSpan="2" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="15.0" right="15.0" />
+               </GridPane.margin></JFXTextField>
+            <Button fx:id="iniciarSesion" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Iniciar Sesion" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <Button fx:id="registrarme" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Registrarme" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <ImageView fitHeight="135.0" fitWidth="129.0" pickOnBounds="true" preserveRatio="true" GridPane.columnSpan="2" GridPane.halignment="CENTER">
+               <GridPane.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </GridPane.margin>
+               <image>
+                  <Image url="@../resources/images6.jpeg" />
+               </image>
+            </ImageView>
          </children>
+         <StackPane.margin>
+            <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+         </StackPane.margin>
       </GridPane>
    </children>
 </StackPane>
